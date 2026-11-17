@@ -1,0 +1,107 @@
+{
+  "train_rows": 7464,
+  "test_rows": 1506,
+  "category": {
+    "model_comparison": {
+      "Naive Bayes": {
+        "accuracy": 0.8891,
+        "macro_f1": 0.8801
+      },
+      "Logistic Regression": {
+        "accuracy": 0.9163,
+        "macro_f1": 0.91
+      },
+      "Linear SVM": {
+        "accuracy": 0.9243,
+        "macro_f1": 0.9175
+      }
+    },
+    "best_model": "Linear SVM",
+    "per_class_f1": {
+      "Account Access": 0.896,
+      "Billing": 0.933,
+      "Delivery": 0.929,
+      "Product Inquiry": 0.876,
+      "Refund": 0.919,
+      "Technical Issue": 0.952
+    }
+  },
+  "sentiment": {
+    "accuracy": 0.6859,
+    "macro_f1": 0.6559,
+    "angry_recall": 0.6742
+  },
+  "escalation": {
+    "comparison": {
+      "Baseline (metadata only)": {
+        "roc_auc": 0.7605,
+        "pr_auc": 0.5202,
+        "capture_top20pct": 0.4427
+      },
+      "AI model (text + metadata)": {
+        "roc_auc": 0.7811,
+        "pr_auc": 0.5324,
+        "capture_top20pct": 0.4533
+      }
+    },
+    "top_drivers": [
+      {
+        "feature": "previous_contacts",
+        "coef": 0.77
+      },
+      {
+        "feature": "customer_tier_Platinum",
+        "coef": 0.361
+      },
+      {
+        "feature": "channel_App",
+        "coef": -0.292
+      },
+      {
+        "feature": "customer_tier_Regular",
+        "coef": -0.235
+      },
+      {
+        "feature": "first_response_min",
+        "coef": 0.228
+      },
+      {
+        "feature": "exclamations",
+        "coef": 0.222
+      },
+      {
+        "feature": "caps_ratio",
+        "coef": 0.205
+      },
+      {
+        "feature": "customer_tier_Silver",
+        "coef": -0.172
+      },
+      {
+        "feature": "channel_Phone",
+        "coef": 0.171
+      },
+      {
+        "feature": "channel_Social Media",
+        "coef": 0.089
+      }
+    ],
+    "top_escalation_words": [
+      "cancel",
+      "cancel refund",
+      "frustrating",
+      "really",
+      "star",
+      "talk",
+      "higher shown",
+      "fed",
+      "unacceptable",
+      "automatically",
+      "price",
+      "reund",
+      "delivery delayed",
+      "thsi",
+      "money"
+    ]
+  }
+}
